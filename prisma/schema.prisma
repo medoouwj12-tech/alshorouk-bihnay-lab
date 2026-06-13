@@ -1,0 +1,144 @@
+// Prisma schema for Al-Shorouk Bihnay Medical Laboratory
+// معمل الشروق بهناي
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============= CATEGORIES =============
+model Category {
+  id        String   @id @default(cuid())
+  nameAr    String
+  nameEn    String
+  slug      String   @unique
+  icon      String?  // lucide icon name
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tests     Test[]
+
+  @@index([order])
+}
+
+// ============= TESTS =============
+model Test {
+  id              String   @id @default(cuid())
+  nameAr          String
+  nameEn          String
+  slug            String   @unique
+  code            String   @unique  // e.g., "CBC", "HbA1c"
+  description     String?
+  price           Decimal
+  turnaroundTime  String?  // e.g., "24 hours", "Same day"
+  sampleType      String?  // e.g., "Blood", "Urine"
+  preparation     String?  // e.g., "Fasting required"
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  requestItems    HomeVisitRequestItem[]
+
+  @@index([categoryId])
+  @@index([isActive])
+  @@index([isFeatured])
+}
+
+// ============= HOME VISIT REQUESTS =============
+model HomeVisitRequest {
+  id          String        @id @default(cuid())
+  name        String
+  phone       String
+  address     String
+  city        String?
+  notes       String?
+  preferredDate DateTime
+  preferredTime String       // e.g., "10:00 - 12:00"
+  status      String        @default("PENDING") // PENDING, CONFIRMED, SAMPLE_COLLECTED, COMPLETED, CANCELLED
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  tests       HomeVisitRequestItem[]
+
+  @@index([status])
+  @@index([preferredDate])
+  @@index([phone])
+}
+
+model HomeVisitRequestItem {
+  id        String  @id @default(cuid())
+  requestId String
+  testId    String
+  request   HomeVisitRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  test      Test    @relation(fields: [testId], references: [id], onDelete: Restrict)
+
+  @@unique([requestId, testId])
+}
+
+// ============= BRANCHES =============
+model Branch {
+  id           String   @id @default(cuid())
+  name         String
+  address      String
+  city         String
+  phone        String
+  whatsapp     String?
+  workingHours String   // e.g., "Sat-Thu: 9AM-10PM, Fri: Closed"
+  mapLink      String?
+  isMain       Boolean  @default(false)
+  isActive     Boolean  @default(true)
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([isActive])
+  @@index([order])
+}
+
+// ============= ACCREDITATIONS =============
+model Accreditation {
+  id        String   @id @default(cuid())
+  name      String   // e.g., "ISO 15189"
+  image     String?  // logo path
+  order     Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([isActive])
+}
+
+// ============= SEO SETTINGS =============
+model SeoSetting {
+  id          String   @id @default(cuid())
+  page        String   @unique // e.g., "home", "tests", "about"
+  titleAr     String
+  titleEn     String
+  descriptionAr String
+  descriptionEn String
+  keywords    String?
+  ogImage     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ============= ADMIN USERS =============
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String   // hashed
+  name      String
+  role      String   @default("admin")
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

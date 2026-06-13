@@ -1,0 +1,89 @@
+{
+  "brand": {
+    "name": "Al-Shorouk Bihnay Lab",
+    "shortName": "Al-Shorouk Lab"
+  },
+  "nav": {
+    "home": "Home",
+    "tests": "Tests",
+    "homeVisit": "Home Visit",
+    "results": "Results",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Al-Shorouk Bihnay Lab",
+    "subtitle": "Precision and Trust in Your Medical Results",
+    "description": "We deliver the latest medical tests with the highest accuracy and fastest turnaround, with home sample collection service in Bihnay and Menoufia.",
+    "cta": {
+      "primary": "Book Home Sample Collection",
+      "secondary": "Browse Our Tests"
+    },
+    "stats": {
+      "tests": "Medical Tests",
+      "patients": "Happy Patients",
+      "branches": "Branches",
+      "experience": "Years Experience"
+    }
+  },
+  "quickActions": {
+    "title": "How can we help you?",
+    "homeVisit": {
+      "title": "Book Home Sample Collection",
+      "description": "Our medical team visits you at your preferred time"
+    },
+    "results": {
+      "title": "Check Your Results",
+      "description": "Get your test results anytime"
+    },
+    "tests": {
+      "title": "Browse Our Tests",
+      "description": "Discover all available medical tests"
+    }
+  },
+  "search": {
+    "placeholder": "Search for a test by name or code...",
+    "button": "Search",
+    "noResults": "No results for"
+  },
+  "about": {
+    "title": "About Al-Shorouk Bihnay Lab",
+    "subtitle": "Accuracy, Trust, Care for Every Patient",
+    "paragraph1": "Since our founding, we are committed to providing the highest levels of accuracy in medical test results using the latest internationally certified equipment and technologies.",
+    "paragraph2": "Our team includes a select group of experienced medical analysis specialists, working under comprehensive medical supervision and strict quality control protocols.",
+    "features": {
+      "accuracy": {
+        "title": "High Accuracy",
+        "description": "Certified results with the latest medical equipment"
+      },
+      "fast": {
+        "title": "Fast Performance",
+        "description": "Same-day results for many tests"
+      },
+      "home": {
+        "title": "Home Service",
+        "description": "Sample collection from the comfort of your home"
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Certified by the largest medical accreditation bodies"
+      }
+    }
+  },
+  "accreditations": {
+    "title": "Accreditations & Certificates",
+    "subtitle": "We adhere to the highest international standards"
+  },
+  "branches": {
+    "title": "Our Branches",
+    "subtitle": "Available to serve you everywhere"
+  },
+  "footer": {
+    "tagline": "Precision and trust in your medical results",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "contact": "Contact Us",
+    "rights": "All rights reserved",
+    "workingHours": "Working Hours"
+  }
+}
