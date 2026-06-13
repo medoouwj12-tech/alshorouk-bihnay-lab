@@ -65,7 +65,7 @@ export function Footer({ locale, labels, nav, contact }: FooterProps) {
                 {labels.tagline}
               </p>
               <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 mt-1.5">
-                {locale === "ar" ? "تحت إشراف د. أحمد فهيم" : "Under supervision of Dr. Ahmed Fahim"}
+                {locale === "ar" ? "تحت إشراف د. أحمد فهيم الجمال" : "Under supervision of Dr. Ahmed Fahim Al-Jamal"}
               </p>
             </div>
             <div className="flex items-center gap-2">

@@ -72,6 +72,16 @@ export function Hero({ locale, content, stats, whatsappLink }: HeroProps) {
               <span className="block mt-2 gradient-text">{content.subtitle}</span>
             </motion.h1>
 
+            <motion.div
+              custom={1.5}
+              initial="hidden"
+              animate="show"
+              variants={fadeUp}
+              className="mt-6 text-2xl md:text-3xl font-bold text-teal-600 dark:text-teal-400 border-s-4 border-teal-500 ps-3"
+            >
+              {locale === "ar" ? "تحت إشراف: د. أحمد فهيم الجمال" : "Under supervision of: Dr. Ahmed Fahim Al-Jamal"}
+            </motion.div>
+
             <motion.p
               custom={2}
               initial="hidden"
