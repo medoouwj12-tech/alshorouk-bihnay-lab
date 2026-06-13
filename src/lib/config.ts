@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   whatsapp: process.env.NEXT_PUBLIC_LAB_WHATSAPP || "+201063765052",
   email: "info@alshorouk-lab.com",
   address: {
-    street: "شارع الجمهورية، بهناي",
+    street: "طريق الباجور - القناطر الخيرية، بجوار كوبري بهناي",
     city: "بهناي",
     governorate: "المنوفية",
     country: "EG",
