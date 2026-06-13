@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // To be added
+    google: "lB3R-OK7kvJKW4TDBc8_GdHG_czQy-fQ-4J49OU7xxE",
   },
   icons: {
     icon: "/favicon.ico",
