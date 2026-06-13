@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "حجز سحب عينة من المنزل - معمل الشروق بهناي",
-  description: "احجز موعد لسحب عينة من المنزل في بهناي والمنوفية. فريق طبي متخصص يوصل لحد عندك.",
+  description: "احجز موعد لسحب عينة من المنزل في بهناي والقرى المجاورة. فريق طبي متخصص يوصل لحد عندك.",
   alternates: { canonical: "/home-visit" },
 };
 
