@@ -105,13 +105,31 @@ async function main() {
     create: {
       id: "main-branch",
       name: "الفرع الرئيسي - بهناي",
-      address: "شارع الجمهورية، بهناي",
+      address: "بهناى 93V9+FGJ El-Bagour",
       city: "بهناي، المنوفية",
       phone: SITE_CONFIG_phone(),
       whatsapp: SITE_CONFIG_whatsapp(),
       workingHours: "السبت - الخميس: 9 ص - 10 م | الجمعة: 2 م - 10 م",
+      mapLink: "https://maps.google.com/?q=93V9%2BFGJ%20El-Bagour",
       isMain: true,
       order: 1,
+    },
+  });
+
+  await prisma.branch.upsert({
+    where: { id: "shanshour-branch" },
+    update: {},
+    create: {
+      id: "shanshour-branch",
+      name: "فرع شنشور",
+      address: "شنشور 9X3W+V6F، شارع شنشور الرئيسي، شارع داير الناحية",
+      city: "شنشور، المنوفية",
+      phone: SITE_CONFIG_phone(),
+      whatsapp: SITE_CONFIG_whatsapp(),
+      workingHours: "السبت - الخميس: 9 ص - 10 م | الجمعة: 2 م - 10 م",
+      mapLink: "https://maps.google.com/?q=9X3W%2BV6F%20Ashmoun",
+      isMain: false,
+      order: 2,
     },
   });
 
@@ -121,11 +139,11 @@ async function main() {
     update: {},
     create: {
       page: "home",
-      titleAr: "معمل الشروق بهناي - دقة وثقة في نتائجك الطبية",
-      titleEn: "Al-Shorouk Bihnay Lab - Precision and Trust",
-      descriptionAr: "معمل الشروق بهناي - أفضل معمل تحاليل طبية في بهناي والمنوفية. تحاليل شاملة، سحب عينات من المنزل، ونتائج دقيقة معتمدة.",
-      descriptionEn: "Al-Shorouk Bihnay Lab - The best medical lab in Bihnay, Menoufia. Comprehensive tests, home sample collection, certified accurate results.",
-      keywords: "معمل الشروق, معمل بهناي, تحاليل طبية, سحب من المنزل",
+      titleAr: "معمل الشروق بهناي وشنشور - دقة وثقة في نتائجك الطبية",
+      titleEn: "Al-Shorouk Bihnay & Shanshour Lab - Precision and Trust",
+      descriptionAr: "معمل الشروق بهناي وشنشور - أفضل معمل تحاليل طبية في بهناي وشنشور والمنوفية. تحاليل شاملة، سحب عينات من المنزل، ونتائج دقيقة معتمدة.",
+      descriptionEn: "Al-Shorouk Bihnay & Shanshour Lab - The best medical lab in Bihnay and Shanshour, Menoufia. Comprehensive tests, home sample collection, certified accurate results.",
+      keywords: "معمل الشروق, معمل بهناي, معمل شنشور, تحاليل طبية, سحب من المنزل",
     },
   });
 

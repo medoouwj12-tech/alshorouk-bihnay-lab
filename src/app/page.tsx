@@ -4,14 +4,15 @@ import { SearchBar } from "@/components/landing/SearchBar";
 import { HomeVisitCTA } from "@/components/landing/HomeVisitCTA";
 import { About } from "@/components/landing/About";
 import { Accreditations } from "@/components/landing/Accreditations";
+import { Branches } from "@/components/landing/Branches";
 import arContent from "../../public/locales/ar/common.json";
 import { SITE_CONFIG } from "@/lib/config";
 
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "معمل الشروق بهناي - دقة وثقة في نتائجك الطبية",
-  description: "معمل الشروق بهناي - أفضل معمل تحاليل طبية في بهناي والقرى المجاورة. تحاليل شاملة، سحب عينات من المنزل، ونتائج دقيقة معتمدة.",
+  title: "معمل الشروق بهناي وشنشور - دقة وثقة في نتائجك الطبية",
+  description: "معمل الشروق بهناي وشنشور - أفضل معمل تحاليل طبية في بهناي وشنشور والقرى المجاورة. تحاليل شاملة، سحب عينات من المنزل، ونتائج دقيقة معتمدة.",
   alternates: { canonical: "/" },
 };
 
@@ -85,6 +86,7 @@ export default function HomePage() {
       <HomeVisitCTA locale={locale} whatsappLink={whatsappLink} />
       <About locale={locale} content={arContent.about} />
       <Accreditations locale={locale} content={arContent.accreditations} />
+      <Branches locale={locale} />
     </>
   );
 }

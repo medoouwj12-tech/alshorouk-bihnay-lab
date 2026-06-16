@@ -184,7 +184,7 @@ export function Footer({ locale, labels, nav, contact }: FooterProps) {
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>
-            © {year} {locale === "ar" ? "معمل الشروق بهناي" : "Al-Shorouk Bihnay Lab"}.{" "}
+            © {year} {locale === "ar" ? "معمل الشروق بهناي وشنشور" : "Al-Shorouk Bihnay & Shanshour Lab"}.{" "}
             {labels.rights}.
           </p>
           <p className="flex items-center gap-1.5">

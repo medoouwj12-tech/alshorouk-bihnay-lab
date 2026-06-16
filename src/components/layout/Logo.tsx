@@ -22,18 +22,18 @@ export function Logo({ variant = "full", className, ...props }: LogoProps) {
         <LogoMark className="h-9 w-9" />
         <div className="flex flex-col leading-none">
           <span className="text-base font-bold text-primary-700">الشروق</span>
-          <span className="text-[10px] font-medium text-muted-foreground">معمل بهناي</span>
+          <span className="text-[10px] font-medium text-muted-foreground">معمل بهناي وشنشور</span>
         </div>
       </div>
     );
   }
-
+ 
   return (
     <div className={cn("flex items-center gap-3", className)}>
       <LogoMark className="h-12 w-12 shrink-0" />
       <div className="flex flex-col leading-tight">
         <span className="text-lg font-extrabold text-primary-700">معمل الشروق</span>
-        <span className="text-sm font-semibold text-teal-600">بهناي</span>
+        <span className="text-sm font-semibold text-teal-600">بهناي / شنشور</span>
       </div>
     </div>
   );
@@ -46,7 +46,7 @@ function LogoMark({ className, ...props }: React.SVGProps<SVGSVGElement>) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={cn("text-primary-600", className)}
-      aria-label="معمل الشروق بهناي"
+      aria-label="معمل الشروق بهناي وشنشور"
       role="img"
       {...props}
     >

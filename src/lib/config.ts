@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 
 export const SITE_CONFIG = {
   name: {
-    ar: "معمل الشروق بهناي",
-    en: "Al-Shorouk Bihnay Lab",
+    ar: "معمل الشروق بهناي وشنشور",
+    en: "Al-Shorouk Bihnay & Shanshour Lab",
   },
   shortName: "معمل الشروق",
   description: {
-    ar: "معمل الشروق بهناي - دقة وثقة في نتائجك الطبية. تحاليل طبية شاملة، سحب عينات من المنزل، ونتائج دقيقة معتمدة.",
-    en: "Al-Shorouk Bihnay Lab - Precision and trust in your medical results. Comprehensive medical tests, home sample collection, and certified accurate results.",
+    ar: "معمل الشروق بهناي وشنشور - دقة وثقة في نتائجك الطبية. تحاليل طبية شاملة، سحب عينات من المنزل، ونتائج دقيقة معتمدة.",
+    en: "Al-Shorouk Bihnay & Shanshour Lab - Precision and trust in your medical results. Comprehensive medical tests, home sample collection, and certified accurate results.",
   },
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://alshorouk-lab.com",
   phone: process.env.NEXT_PUBLIC_LAB_PHONE || "+201063765052",
   whatsapp: process.env.NEXT_PUBLIC_LAB_WHATSAPP || "+201063765052",
   email: "info@alshorouk-lab.com",
   address: {
-    street: "طريق الباجور - القناطر الخيرية، بجوار كوبري بهناي",
-    city: "بهناي",
+    street: "بهناي (بجوار كوبري بهناي) & شنشور (شارع شنشور الرئيسي)",
+    city: "المنوفية",
     governorate: "المنوفية",
     country: "EG",
   },

@@ -60,7 +60,7 @@ export function Navbar({ locale, labels }: NavbarProps) {
     >
       <nav className="container flex h-16 items-center justify-between" aria-label="Primary">
         {/* Logo */}
-        <Link href="/" aria-label="الصفحة الرئيسية - معمل الشروق بهناي" className="shrink-0">
+        <Link href="/" aria-label="الصفحة الرئيسية - معمل الشروق بهناي وشنشور" className="shrink-0">
           <Logo />
         </Link>
 

@@ -143,7 +143,7 @@ export function Hero({ locale, content, stats, whatsappLink }: HeroProps) {
           >
             <div className="relative rounded-3xl bg-white border border-border shadow-card-hover p-8 lg:p-10">
               <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-full bg-teal-500 text-white text-xs font-bold shadow-soft">
-                {locale === "ar" ? "الأفضل في بهناي" : "Best in Bihnay"}
+                {locale === "ar" ? "الأفضل في بهناي وشنشور" : "Best in Bihnay & Shanshour"}
               </div>
 
               <div className="grid grid-cols-2 gap-6">

@@ -16,7 +16,7 @@ const features = [
   { icon: CheckCircle2, textAr: "فريق طبي متخصص", textEn: "Expert medical team" },
   { icon: CheckCircle2, textAr: "نفس دقة المعمل", textEn: "Same lab-grade accuracy" },
   { icon: CheckCircle2, textAr: "مواعيد مرنة", textEn: "Flexible scheduling" },
-  { icon: CheckCircle2, textAr: "تغطية لكل بهناي والقرى المجاورة", textEn: "Coverage across Bihnay & surrounding villages" },
+  { icon: CheckCircle2, textAr: "تغطية شاملة لبهناي وشنشور والقرى المجاورة", textEn: "Full coverage across Bihnay, Shanshour & surrounding villages" },
 ];
 
 export function HomeVisitCTA({ locale, whatsappLink }: HomeVisitCTAProps) {
